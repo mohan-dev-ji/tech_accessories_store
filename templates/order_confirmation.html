@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+    <h1>Order Confirmation</h1>
+    <p>Thank you for your order! Your payment has been processed successfully.</p>
+    
+    <h2>Order Details</h2>
+    <p>Order ID: {{ stripe_session.id }}</p>
+    <!-- <p>Description: {{ stripe_session.line_items.data[0].description }}</p> -->
+    <p>Total: £{{ "%.2f"|format(stripe_session.amount_total / 100) }}</p>
+    
+    <h2>Customer Information</h2>
+    <p>Name: {{ stripe_session.customer_details.name }}</p>
+    <p>Email: {{ stripe_session.customer_details.email }}</p>
+    
+    <h2>Shipping Information</h2>
+    {% if stripe_session.shipping_details %}
+        <p>Name: {{ stripe_session.shipping_details.name }}</p>
+        <p>Address: {{ stripe_session.shipping_details.address.line1 }}</p>
+        {% if stripe_session.shipping_details.address.line2 %}
+        <p>Address 2: {{ stripe_session.shipping_details.address.line2 }}</p>
+        {% endif %}
+        <p>City: {{ stripe_session.shipping_details.address.city }}</p>
+        <p>State: {{ stripe_session.shipping_details.address.state }}</p>
+        <p>Country: {{ stripe_session.shipping_details.address.country }}</p>
+        <p>Postal Code: {{ stripe_session.shipping_details.address.postal_code }}</p>
+    {% else %}
+        <p>No shipping information provided.</p>
+    {% endif %}
+    
+    <a href="/" class="btn btn-primary">Continue Shopping</a>
+</div>
+{% endblock %}

@@ -1,0 +1,187 @@
+Stripe Session Object
+{
+  "id": "cs_test_b1TIvDBGQaFsvL5FKjZa3rZAQnAotsZwWVZZHfiCeRJffHx2NOUAKtzMuZ",
+  "object": "checkout.session",
+  "after_expiration": null,
+  "allow_promotion_codes": null,
+  "amount_subtotal": 4997,
+  "amount_total": 4997,
+  "automatic_tax": {
+    "enabled": false,
+    "liability": null,
+    "status": null
+  },
+  "billing_address_collection": null,
+  "cancel_url": "http://127.0.0.1:5000/checkout/cancel",
+  "client_reference_id": null,
+  "client_secret": null,
+  "consent": null,
+  "consent_collection": null,
+  "created": 1719725909,
+  "currency": "gbp",
+  "currency_conversion": null,
+  "custom_fields": [],
+  "custom_text": {
+    "after_submit": null,
+    "shipping_address": null,
+    "submit": null,
+    "terms_of_service_acceptance": null
+  },
+  "customer": null,
+  "customer_creation": "if_required",
+  "customer_details": {
+    "address": {
+      "city": "Darenth",
+      "country": "GB",
+      "line1": "32 High Holborn",
+      "line2": null,
+      "postal_code": "L3P 1X5",
+      "state": null
+    },
+    "email": "mo@mo.com",
+    "name": "king mo the 8th",
+    "phone": null,
+    "tax_exempt": "none",
+    "tax_ids": []
+  },
+  "customer_email": null,
+  "expires_at": 1719812309,
+  "invoice": null,
+  "invoice_creation": {
+    "enabled": false,
+    "invoice_data": {
+      "account_tax_ids": null,
+      "custom_fields": null,
+      "description": null,
+      "footer": null,
+      "issuer": null,
+      "metadata": {},
+      "rendering_options": null
+    }
+  },
+  "line_items": {
+    "object": "list",
+    "data": [
+      {
+        "id": "li_1PXGT3IukMYD4P5fwxsWKbcL",
+        "object": "item",
+        "amount_discount": 0,
+        "amount_subtotal": 1998,
+        "amount_tax": 0,
+        "amount_total": 1998,
+        "currency": "gbp",
+        "description": "Baseus Usb Hub 4 Port",
+        "price": {
+          "id": "price_1PXGT3IukMYD4P5ff8Sy764P",
+          "object": "price",
+          "active": false,
+          "billing_scheme": "per_unit",
+          "created": 1719725909,
+          "currency": "gbp",
+          "custom_unit_amount": null,
+          "livemode": false,
+          "lookup_key": null,
+          "metadata": {},
+          "nickname": null,
+          "product": "prod_QNX29GuZqzQuEA",
+          "recurring": null,
+          "tax_behavior": "unspecified",
+          "tiers_mode": null,
+          "transform_quantity": null,
+          "type": "one_time",
+          "unit_amount": 1998,
+          "unit_amount_decimal": "1998"
+        },
+        "quantity": 1
+      },
+      {
+        "id": "li_1PXGT3IukMYD4P5fHvrE6fut",
+        "object": "item",
+        "amount_discount": 0,
+        "amount_subtotal": 2999,
+        "amount_tax": 0,
+        "amount_total": 2999,
+        "currency": "gbp",
+        "description": "Logitech G304 Wireless Mouse",
+        "price": {
+          "id": "price_1PXGT3IukMYD4P5fEGBTaC0n",
+          "object": "price",
+          "active": false,
+          "billing_scheme": "per_unit",
+          "created": 1719725909,
+          "currency": "gbp",
+          "custom_unit_amount": null,
+          "livemode": false,
+          "lookup_key": null,
+          "metadata": {},
+          "nickname": null,
+          "product": "prod_QNX2JFSx02G03n",
+          "recurring": null,
+          "tax_behavior": "unspecified",
+          "tiers_mode": null,
+          "transform_quantity": null,
+          "type": "one_time",
+          "unit_amount": 2999,
+          "unit_amount_decimal": "2999"
+        },
+        "quantity": 1
+      }
+    ],
+    "has_more": false,
+    "url": "/v1/checkout/sessions/cs_test_b1TIvDBGQaFsvL5FKjZa3rZAQnAotsZwWVZZHfiCeRJffHx2NOUAKtzMuZ/line_items"
+  },
+  "livemode": false,
+  "locale": null,
+  "metadata": {},
+  "mode": "payment",
+  "payment_intent": "pi_3PXGTtIukMYD4P5f2M9Hg8xB",
+  "payment_link": null,
+  "payment_method_collection": "if_required",
+  "payment_method_configuration_details": null,
+  "payment_method_options": {
+    "card": {
+      "request_three_d_secure": "automatic"
+    }
+  },
+  "payment_method_types": [
+    "card"
+  ],
+  "payment_status": "paid",
+  "phone_number_collection": {
+    "enabled": false
+  },
+  "recovered_from": null,
+  "saved_payment_method_options": null,
+  "setup_intent": null,
+  "shipping_address_collection": {
+    "allowed_countries": [
+      "US",
+      "CA",
+      "GB"
+    ]
+  },
+  "shipping_cost": null,
+  "shipping_details": {
+    "address": {
+      "city": "Darenth",
+      "country": "GB",
+      "line1": "32 High Holborn",
+      "line2": null,
+      "postal_code": "L3P 1X5",
+      "state": null
+    },
+    "name": "king mo the 8th"
+  },
+  "shipping_options": [],
+  "status": "complete",
+  "submit_type": null,
+  "subscription": null,
+  "success_url": "http://127.0.0.1:5000/checkout/success?session_id={CHECKOUT_SESSION_ID}",
+  "total_details": {
+    "amount_discount": 0,
+    "amount_shipping": 0,
+    "amount_tax": 0
+  },
+  "ui_mode": "hosted",
+  "url": null
+}
